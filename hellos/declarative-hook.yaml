@@ -1,0 +1,15 @@
+greeter<-:
+  help: A thing that says hi!
+  target: str
+  args:
+    - target
+  exec:
+    hi->: print Hello {{target}}
+
+compact->: greeter world!
+expanded:
+  ->: greeter
+  target: world!
+jinja_extension->: "{{ greeter('world!') }}"
+hello: world!
+jinja_filter->: "{{ hello | greeter }}"

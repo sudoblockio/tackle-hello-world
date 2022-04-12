@@ -1,0 +1,7 @@
+hello: Hello world!
+compact->: print {{hello}}
+expanded:
+  ->: print
+  objects: "{{hello}}"
+jinja_extension->: "{{ print(hello) }}"
+jinja_filter->: "{{ hello | print }}"

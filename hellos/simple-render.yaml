@@ -1,0 +1,3 @@
+target: world
+
+p->: print Hello {{target}}!

@@ -1,0 +1,7 @@
+name->: input
+target:
+  ->: select Say hi to who?
+  choices:
+    - world
+    - universe
+hello->: print My name is {{name}}. Hello {{target}}!

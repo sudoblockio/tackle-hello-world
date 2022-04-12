@@ -1,0 +1,9 @@
+p->: print "{{file('../hooks/hello.py')}}"
+
+hello: world!
+compact->: python_greeter {{hello}}
+expanded:
+  ->: python_greeter
+  target: "{{hello}}"
+jinja_extension->: "{{ python_greeter(hello) }}"
+jinja_filter->: "{{ hello | python_greeter }}"

@@ -1,0 +1,12 @@
+roadmap: |
+  markdown
+  **Better function support**
+  - Inlclude function multiple inheritence model
+  - Add model so methods can be called on a function
+  - Ability for to be able to inherit from schemas inlcuding OpenAPI and protobuf
+
+  **Cache and state**
+  - Tackle is getting slow and so improvments to speed should be made
+  - Store local state file of providers so that each remote call doesn't need to be fetched
+  - Pickle the native providers
+  - Allow

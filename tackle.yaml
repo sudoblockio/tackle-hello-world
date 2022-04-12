@@ -1,0 +1,55 @@
+hello_worlds:
+  - Simplist:
+      file: simple.yaml
+      desc: Simplest example using a `print` hook
+  - With rendering:
+      file: simple-render.yaml
+      desc: Printing using rendering where context is used from prior key
+  - Calling hooks multiple ways:
+      file: multiple-prints.yaml
+      desc: Using the `print` hook multiple ways
+  - Interactive examples:
+      file: interactive.yaml
+      desc: Interactive example using `input` and `select` hooks
+  - With flow control logic:
+      file: flow-control.yaml
+      desc: Interactive example using `input` and `select` hooks
+  - Python hooks:
+      file: python-hook.yaml
+      desc: |
+        Using a python hook which is located in the `hooks/hello.py` and automatically
+        made available. These are the basis of all tackle hooks.
+  - Declarative hooks:
+      file: declarative-hook.yaml
+      desc: |
+        Using declarative hook, ie hook created in yaml. These are reusable groups of
+        logic or can be used to validate schemas and expose methods against them.
+  - Declarative imported hooks:
+      file: declarative-hook-import.yaml
+      desc: |
+        Again, a declarative hook but this time it is simply a file located in the `hooks`
+        directory which is then made available to rest of the runtime.
+  - Road map:
+      file: roadmap.yaml
+      desc: |
+        And more to come in the future.
+
+examples:
+  ->: checkbox Select which ways to print `hello world` in tackle
+  checked: true
+  choices: hello_worlds
+
+do->:
+  for: examples
+  chdir: hellos
+  input-info:
+    ->: markdown
+    text: |
+      Input File:
+      ```
+      {{file(item.file)}}
+      ```
+  desc->: print [bold red]{{item.desc}}[/bold red]
+  output-info->: print "Console Output:" "\n"
+  run->: tackle {{item.file}}
+  cat->: confirm Continue?

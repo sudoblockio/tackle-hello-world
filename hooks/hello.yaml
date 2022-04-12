@@ -1,0 +1,7 @@
+declarative_greeter<-:
+  help: A thing that says hi!
+  target: str
+  args:
+    - target
+  exec:
+    hi->: print Hello {{target}}

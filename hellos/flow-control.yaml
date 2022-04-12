@@ -1,0 +1,9 @@
+words:
+  - Hello
+  - cruel
+  - world!
+compact->: print {{item}} --for words --if "item != 'cruel'"
+expanded:
+  ->: print {{item}}
+  for: words
+  if: item != 'cruel'
