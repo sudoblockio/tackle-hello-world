@@ -35,7 +35,7 @@ hello_worlds:
         And more to come in the future.
 
 examples:
-  ->: checkbox Select which ways to print `hello world` in tackle
+  ->: checkbox "Select which ways to print `hello world` in tackle"
   checked: true
   choices: hello_worlds
 
@@ -49,7 +49,7 @@ do->:
       ```
       {{file(item.file)}}
       ```
-  desc->: print [bold red]{{item.desc}}[/bold red]
+  desc->: print "[bold red]{{item.desc}}[/bold red]"
   output-info->: print "Console Output:" "\n"
   run->: tackle {{item.file}}
   cat->: confirm Continue?
