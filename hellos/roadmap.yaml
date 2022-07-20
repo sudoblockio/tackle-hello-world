@@ -1,13 +1,19 @@
 roadmap: |
   markdown
   **Better declarative hooks support**
-  - Multiple inheritence model
-    - OpenAPI
-    - Protobuf
-  - Methods
+  - Support schema inheritance
+    - Examples:
+      - OpenAPI
+      - Protobuf
+    - Idea would be able to take a schema and create a way of calling an API with that schema in a couple lines of code.
+    - Would allow making CLIs that call APIs in all yaml that are super clean
+
+  **Help + Better Declarative CLI Support**
+  - Tackle's declarative hooks were supposed to be the interface with the outside world. This has not been realized yet.
+  - Would be super cool if each tackle file could have a pretty `help` screen showing all the options.
 
   **Cache and state**
-  - Tackle is getting slow and so improvments to speed should be made
+  - Tackle is getting a little slow and will only get slower as more hooks are added
   - Store local state file of providers so that each remote call doesn't need to be fetched
     - Ability to freeze / pin providers
   - Version controlled parser

@@ -2,7 +2,7 @@
 
 ![example workflow](https://github.com/robcxyz/tackle-hello-world/actions/workflows/main.yml/badge.svg)
 
-A [tackle-box](https://github.com/robcxyz/tackle-box) provider for...
+A [tackle-box](https://github.com/robcxyz/tackle-box) provider that does some "Hello worlds!".
 
 ### Usage
 
