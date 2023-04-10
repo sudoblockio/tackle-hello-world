@@ -11,5 +11,3 @@ expanded:
   ->: greeter
   target: world!
 jinja_extension->: "{{ greeter('world!') }}"
-hello: world!
-jinja_filter->: "{{ hello | greeter }}"

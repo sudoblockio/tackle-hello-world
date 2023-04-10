@@ -4,4 +4,3 @@ expanded:
   ->: print
   objects: "{{hello}}"
 jinja_extension->: "{{ print(hello) }}"
-jinja_filter->: "{{ hello | print }}"

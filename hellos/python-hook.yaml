@@ -6,4 +6,3 @@ expanded:
   ->: python_greeter
   target: "{{hello}}"
 jinja_extension->: "{{ python_greeter(hello) }}"
-jinja_filter->: "{{ hello | python_greeter }}"

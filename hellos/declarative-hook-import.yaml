@@ -5,6 +5,3 @@ expanded:
   ->: declarative_greeter
   target: world!
 jinja_extension->: "{{ declarative_greeter('world!') }}"
-hello: world!
-
-#jinja_filter->: "{{ hello | declarative_greeter }}"
